@@ -108,4 +108,5 @@ VALUES  ('Smartphone', 499.99, 1, 'A powerful and feature-rich smartphone for al
         ('Women''s Blouse', 49.99, 2, 'A versatile and chic blouse for everyday wear.', 'womens-blouse.jpg', 40, 0, 'Lavender'),
         ('Cookware Set', 149.99, 3, 'A comprehensive set of high-quality cookware for all your culinary needs.', 'cookware-set.jpg', 50, 1, 'Red'),
         ('Coffee Maker', 79.99, 3, 'Brew your favorite coffee with this efficient and stylish coffee maker.', 'coffee-maker.jpg', 30, 0, 'Black'),
-        ('Kitchen Knife Set', 59.99, 3, 'A set of sharp and durable knives for effortless food preparation.', 'knife-set.jpg', 40, 1, 'Silver');
+        ('Kitchen Knife Set', 59.99, 3, 'A set of sharp and durable knives for effortless food preparation.', 'knife-set.jpg', 40, 1, 'Silver'),
+        ('desktop Set', 1500, 3, 'A high-performance desktop for gaming.', 'desktop.jpg', 40, 1, 'black');
