@@ -17,9 +17,8 @@ import java.util.List;
     // http://localhost:8080/categories
 // add annotation to allow cross site origin requests
 @RestController
-@RequestMapping ("/categories")
+@RequestMapping ("categories")
 @CrossOrigin
-@PreAuthorize ("isAuthorize()")
 public class CategoriesController
 {
     // create an Autowired controller to inject the categoryDao and ProductDao
@@ -41,7 +40,7 @@ public class CategoriesController
     }
 
     // add the appropriate annotation for a get action
-    @GetMapping(path = "/{id}")
+    @GetMapping( "/{id}")
     public Category getById(@PathVariable int id)
     {
         // get the category by id
@@ -50,7 +49,7 @@ public class CategoriesController
 
     // the url to return all products in category 1 would look like this
     // https://localhost:8080/categories/1/products
-    @GetMapping(path = "/{categoryId}/products")
+    @GetMapping( "/{categoryId}/products")
     public List<Product> getProductsById(@PathVariable int categoryId)
     {
         // get a list of product by categoryId
@@ -70,7 +69,7 @@ public class CategoriesController
 
     // add annotation to call this method for a PUT (update) action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
-    @PutMapping(path = "/{id}")
+    @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public void updateCategory(@PathVariable int id, @RequestBody Category category)
     {
@@ -82,7 +81,7 @@ public class CategoriesController
 
     // add annotation to call this method for a DELETE action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
-    @Delete("/{id}")
+    @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCategory(@PathVariable int id)
